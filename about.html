@@ -32,6 +32,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script src="js/email.js"></script>
+  <script src="js/readmore.js"></script>
+  <script src="js/search.js"></script>
 
 </head>
 
@@ -45,6 +47,23 @@
   .rounded-image {
     border-radius: 15px;
     overflow: hidden; /* Ensures the image corners are rounded */
+  }
+  #full-text {
+    transition: all 0.5s ease;
+  }
+
+  .nav_search-btn {
+    /* background-color: #007bff; */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 15px;
+  }
+
+  .form-control {
+    width: 200px;
+    margin-right: 8px;
+    border-radius: 15px;
   }
 </style>
 
@@ -83,11 +102,14 @@
                 </li>
               </ul>
               <div class="user_option">
-                <a href="">
+                <!-- <a href="">
                   <img src="images/user.png" alt="">
-                </a>
+                </a> -->
                 <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                    <!-- <i class="fab fa-search"></i> You can add an icon here -->
+                  </button>
                 </form>
               </div>
             </div>
@@ -113,25 +135,24 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                WHO WE ARE?
+                WHO ARE WE?
               </h2>
             </div>
-            <p>
-              We are the Research and Development Center at Life University, Sihanoukville, Cambodia, dedicated to advancing the fields of Application Development and Cybersecurity. Our mission is to provide 
-              students in the Computer Science program with cutting-edge knowledge and practical experience, empowering them to meet global standards in technology.
-
+            <p id="short-text">
+              We are the Research and Development Center at Life University, Sihanoukville, Cambodia, dedicated to advancing the fields of Application Development and Cybersecurity. Our mission is to provide students in the Computer Science program with cutting-edge knowledge and practical experience, empowering them to meet global standards in technology.
+            </p>
+            <p id="full-text" style="display: none;">
               At the heart of our vision is a commitment to shaping students into future leaders who can excel in their studies, open doors to international opportunities, and secure promising careers. We aim to inspire innovation, foster critical thinking, and prepare our students to thrive in an ever-evolving digital landscape.
             </p>
             <div>
-              <a href="#">
-                Read More
-              </a>
+              <a href="javascript:void(0);" id="read-more" onclick="toggleText()">Read More</a>
             </div>
           </div>
-        </div>
+        </div>        
       </div>
     </div>
   </section>
+  
 
   <!-- end who section -->
   <!-- Team Start -->
@@ -384,7 +405,7 @@
               <form id="emailForm" onsubmit="storeEmail(event)">
                 <label for="email">Enter your email:</label>
                 <input type="email" id="email" required style="border-radius : 20px;">
-                <button type="submit">Submit</button>
+                <button type="submit" style="border-radius:20px;">Subscribe</button>
               </form>
               <div id="emailDisplay"></div> 
 
