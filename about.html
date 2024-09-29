@@ -35,6 +35,9 @@
   <script src="js/readmore.js"></script>
   <script src="js/search.js"></script>
 
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><i class="fa fa-phone" style="font-size:36px"></i> -->
+
+
 </head>
 
 <style>
@@ -52,18 +55,29 @@
     transition: all 0.5s ease;
   }
 
-  .nav_search-btn {
-    /* background-color: #007bff; */
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 15px;
+  ul.navbar-nav {
+    list-style-type: none !important; 
+    padding-left: 0 !important;       
+    margin-left: 0 !important; 
+    gap : 40px;     
+    font-size : 20px;
+  }
+
+  a{
+    color : white; 
+  }
+
+  a:hover{
+    color:aquamarine
   }
 
   .form-control {
     width: 200px;
     margin-right: 8px;
     border-radius: 15px;
+  }
+  .fa{
+    display : none;
   }
 </style>
 
@@ -75,7 +89,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
           <a class="navbar-brand" href="index.html">
             <span>
-              LU Hope R&D
+              LU Hope Research & Development
             </span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,33 +98,22 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="do.html"> What we do </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="portfolio.html"> Portfolio </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact us</a>
-                </li>
-              </ul>
-              <div class="user_option">
-                <!-- <a href="">
-                  <img src="images/user.png" alt="">
-                </a> -->
-                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
-                    <!-- <i class="fab fa-search"></i> You can add an icon here -->
-                  </button>
-                </form>
+              <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav">
+                    <li><a class="active" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a class="active" href="about.html">About</a></li>
+                    <li><a class="active" href="do.html">What We Do</a></li>
+                    <li><a class="active" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="active" href="contact.html">Contact Us</a></li>
+                  </ul>
+                </div>
+              </nav>
+              <div class="d-none d-xl-flex flex-shirink-0">
+                <div class="d-flex flex-column pe-4 border-end">
+                    <span class="text-white-50">Have any questions?</span>
+                    <a class="text-white" href="tel:+88581223530">Call: +885 81 223 530</a>
+                </div>
               </div>
             </div>
           </div>
